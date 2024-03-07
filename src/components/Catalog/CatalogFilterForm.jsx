@@ -87,7 +87,7 @@ const CatalogFilterForm = () => {
   };
 
   return (
-    <div className="container">
+    <div className="margin">
       <form onSubmit={handelSubmit}>
         <label>
           <p>Car brand</p>
@@ -107,7 +107,12 @@ const CatalogFilterForm = () => {
           />
         </label>
 
-        <button type="submit">Search</button>
+        <button
+          type="submit"
+          className="w-[136px] h-[48px] rounded-[12px] bg-[#3470ff] text-[#fff]"
+        >
+          Search
+        </button>
       </form>
     </div>
   );
