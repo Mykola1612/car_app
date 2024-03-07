@@ -66,7 +66,7 @@ const CatalogCard = ({ handelOpen }) => {
                   </li>
                 </ul>
                 <button
-                  onClick={() => handelOpen()}
+                  onClick={() => handelOpen(car.id)}
                   className="w-[274px] h-[44px] bg-[#3470ff] rounded-[12px] text-white"
                 >
                   Learn more

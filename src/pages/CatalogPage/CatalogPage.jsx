@@ -23,6 +23,7 @@ const CatalogPage = () => {
       cars.filter((elem) => {
         return elem.id === carId;
       });
+
     setCar(car);
   }, [cars, carId]);
 
