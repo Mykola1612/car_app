@@ -3,10 +3,10 @@ import axios from 'axios';
 
 export const fetchCar = createAsyncThunk(
   'cars/fetchAll',
-  async (_, { rejectWithValue }) => {
+  async ({ page, limit }, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        `https://65e847d54bb72f0a9c4ed2ee.mockapi.io/advert`
+        `https://65e847d54bb72f0a9c4ed2ee.mockapi.io/advert?page=${page}&limit=${limit}`
       );
       return data;
     } catch (err) {
@@ -18,7 +18,7 @@ export const fetchCar = createAsyncThunk(
 const carsSlice = createSlice({
   name: 'cars',
 
-  initialState: { items: [], isLoading: false, error: null },
+  initialState: { items: [], isLoading: false, error: null, totalItems: false },
   reducers: {},
   extraReducers: (builder) =>
     builder
@@ -28,7 +28,15 @@ const carsSlice = createSlice({
       })
       .addCase(fetchCar.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.items = payload;
+        if (payload.length === 0) {
+          state.totalItems = true;
+          return;
+        }
+        const uniquePayload = payload.filter(
+          (newItem) =>
+            !state.items.some((existingItem) => existingItem.id === newItem.id)
+        );
+        state.items = [...state.items, ...uniquePayload];
       })
       .addCase(fetchCar.rejected, (state, { payload }) => {
         state.error = payload;

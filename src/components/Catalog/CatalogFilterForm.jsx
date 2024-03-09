@@ -1,4 +1,7 @@
 import Select from 'react-select';
+import { getCars } from '../../redux/selectors';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 const options = [
   {
@@ -81,9 +84,24 @@ const options = [
   },
 ];
 
-const CatalogFilterForm = () => {
+const CatalogFilterForm = ({ filterFn }) => {
+  const cars = useSelector(getCars);
+  const [filterCars, setFilterCars] = useState([]);
+
   const handelSubmit = (e) => {
     e.preventDefault();
+    if (!e.target.brand.value) {
+      console.log('ngjkngnjkgd');
+      return;
+    }
+    const filteredCars = cars.filter(
+      (car) => car.make === e.target.brand.value
+    );
+    if (filterCars.length === 0) {
+      return console.log('Not Faund');
+    }
+    setFilterCars(filteredCars);
+    filterFn(filteredCars);
   };
 
   return (
@@ -95,18 +113,10 @@ const CatalogFilterForm = () => {
             options={options}
             placeholder="Enter the text"
             classNamePrefix="searchSelect"
+            name="brand"
             defaultValue=""
           />
         </label>
-        <label>
-          <p>Price/ 1 hour</p>
-          <Select
-            options={options}
-            classNamePrefix="searchSelect"
-            defaultValue=""
-          />
-        </label>
-
         <button
           type="submit"
           className="w-[136px] h-[48px] rounded-[12px] bg-[#3470ff] text-[#fff]"
