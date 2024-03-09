@@ -10,7 +10,7 @@ const Favorites = ({ handelOpen }) => {
     localStorage.setItem('favoritesCar', JSON.stringify(favoritesCars));
   }, [favoritesCars]);
 
-  return (
+  return favoritesCars.length !== 0 ? (
     <ul className="flex flex-wrap gap-x-[30px] gap-y-[50px] justify-center">
       {favoritesCars.length !== 0 &&
         favoritesCars.map((car) => {
@@ -117,6 +117,12 @@ const Favorites = ({ handelOpen }) => {
           );
         })}
     </ul>
+  ) : (
+    <div className="">
+      <p className="text-2xl text-[#121417] text-center">
+        There are no favorite cars yet
+      </p>
+    </div>
   );
 };
 

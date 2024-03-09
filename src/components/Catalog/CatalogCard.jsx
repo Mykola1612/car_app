@@ -102,7 +102,7 @@ const CatalogCard = ({ handelOpen, cars }) => {
                       <p>{car.id}</p>
                     </li>
                     <li>
-                      <p></p>
+                      <p>{car.accessories[0]}</p>
                     </li>
                   </ul>
                 </div>

@@ -87,7 +87,7 @@ const CatalogPage = () => {
                   {carModal.year}
                 </h2>
 
-                <ul className="flex flex-wrap gap-x-[12px] text-xs leading-[150%] mb-[14px]">
+                <ul className="flex flex-wrap gap-x-[12px] text-xs leading-[150%] mb-[14px] w-[292px]">
                   <li>
                     <p>
                       {

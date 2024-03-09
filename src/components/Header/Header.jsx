@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 export const Header = () => {
   return (
     <header>
-      <nav className="container">
+      <nav className="container flex justify-around">
         <NavLink className="link_header" to="/">
           Home
         </NavLink>

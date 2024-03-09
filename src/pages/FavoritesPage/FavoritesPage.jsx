@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import Favorites from '../../components/Favorites/Favorites';
 import Modal from '../../components/Modal/Modal';
-import { useSelector } from 'react-redux';
-import { getCars } from '../../redux/selectors';
 
 const FavoritesPage = () => {
   const [modalInfoIsOpen, setModalInfoIsOpen] = useState(false);
 
-  const cars = useSelector(getCars);
+  const [cars] = useState(
+    JSON.parse(localStorage.getItem('favoritesCar')) || []
+  );
   const [carId, setCarId] = useState(null);
   const [car, setCar] = useState([]);
 
@@ -58,7 +58,7 @@ const FavoritesPage = () => {
                   {carModal.year}
                 </h2>
 
-                <ul className="flex flex-wrap gap-x-[12px] text-xs leading-[150%] mb-[14px]">
+                <ul className="flex flex-wrap gap-x-[12px] text-xs leading-[150%] mb-[14px] w-[292px]">
                   <li>
                     <p>
                       {

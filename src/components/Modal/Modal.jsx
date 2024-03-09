@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             onClick={onWrapperClick}
             className="modal-wrapper absolute top-0 left-0 justify-center flex items-center w-[100%] min-h-[100%]"
           >
-            <div className="relative w-[100%] max-w-[541px] bg-[#fff] rounded-[24px] max-h-[752px] p-[40px]">
+            <div className="relative w-[100%] max-w-[541px] bg-[#fff] rounded-[24px] min-h-[752px] p-[40px]">
               <button
                 className="absolute top-[16px] right-[16px] group focus:outline-none"
                 onClick={() => onClose()}
