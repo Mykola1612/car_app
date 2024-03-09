@@ -15,14 +15,11 @@ const Modal = ({ isOpen, onClose, children }) => {
           >
             <div className="relative w-[100%] max-w-[541px] bg-[#fff] rounded-[24px] max-h-[752px] p-[40px]">
               <button
-                className="absolute top-[16px] right-[16px]"
+                className="absolute top-[16px] right-[16px] group focus:outline-none"
                 onClick={() => onClose()}
               >
-                <svg className="w-[24px] h-[24px]">
-                  <use
-                    className="stroke-[#121417]"
-                    href={`${sprite}#icon-close`}
-                  />
+                <svg className="w-[24px] h-[24px] stroke-[#121417] group-hover:stroke-[#0b44cd] group-focus:stroke-[#0b44cd] focus:outline-none  ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-[250ms]">
+                  <use href={`${sprite}#icon-close`} />
                 </svg>
               </button>
               {children}

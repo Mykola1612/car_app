@@ -5,6 +5,10 @@ import { useState } from 'react';
 
 const options = [
   {
+    value: 'All',
+    label: 'All',
+  },
+  {
     value: 'Buick',
     label: 'Buick',
   },
@@ -94,37 +98,47 @@ const CatalogFilterForm = ({ filterFn }) => {
       console.log('ngjkngnjkgd');
       return;
     }
+    if (e.target.brand.value === 'All') {
+      setFilterCars(cars);
+      filterFn(cars, false);
+      return;
+    }
+
     const filteredCars = cars.filter(
       (car) => car.make === e.target.brand.value
     );
     if (filterCars.length === 0) {
-      return console.log('Not Faund');
+      console.log('Not Faund');
     }
     setFilterCars(filteredCars);
-    filterFn(filteredCars);
+    filterFn(filteredCars, true);
   };
 
   return (
-    <div className="margin">
-      <form onSubmit={handelSubmit}>
+    <section className="margin pb-[50px]">
+      <form onSubmit={handelSubmit} className="flex justify-between items-end ">
         <label>
-          <p>Car brand</p>
+          <p className="mb-[8px] font-medium font-sm leading-[129%] text-[#8a8a89]">
+            Car brand
+          </p>
           <Select
             options={options}
             placeholder="Enter the text"
-            classNamePrefix="searchSelect"
+            classNamePrefix="custom_select"
             name="brand"
             defaultValue=""
           />
         </label>
         <button
           type="submit"
-          className="w-[136px] h-[48px] rounded-[12px] bg-[#3470ff] text-[#fff]"
+          className="w-[136px] h-[48px] bg-[#3470ff] py-[14px] px-[44px] rounded-[12px]
+                 text-white font-semibold text-sm leading-[143%] font-[Manrope]
+                 focus:bg-[#0b44cd] hover:bg-[#0b44cd]  focus:outline-none  ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-[250ms]"
         >
           Search
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 
