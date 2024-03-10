@@ -18,7 +18,7 @@
 }
 
 .footer-span-choco {
-  color: #fd9222;
+  color: #3470ff;
 }
 
 .footer-p {
@@ -45,13 +45,6 @@
   flex-direction: column;
   row-gap: 14px;
 }
-.footer-list-link {
-  color: #fff;
-}
-.footer-list-link:hover,
-.footer-list-link:focus {
-  color: #fd9222;
-}
 
 .footer-icon {
   stroke: #fff;
@@ -62,7 +55,7 @@
 
 .footer-icon:focus,
 .footer-icon:hover {
-  stroke: #fd9222;
+  stroke: #3470ff;
 }
 
 .footer_contact_container {
@@ -79,6 +72,17 @@
 .footer_list_icon:not(:last-child) {
   margin-bottom: 4px;
 }
+
+.contact-list {
+  color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-list:hover,
+.contact-list:focus {
+  color: #3470ff;
+}
+
 /* ==================================tablet================================== */
 @media screen and (min-width: 768px) {
   .footer-title {

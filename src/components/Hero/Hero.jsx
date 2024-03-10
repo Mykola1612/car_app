@@ -3,9 +3,9 @@ import rangeRoverSportImage from '../../assets/land_rover_range_rover_sport.jpeg
 
 const Hero = () => {
   return (
-    <section id="home" className="h-[800px] flex justify-center items-center ">
+    <section id="home" className="h-[740px] flex justify-center items-center ">
       <div
-        className="absolute inset-0 z-[-1] "
+        className="absolute inset-0 z-[-1] h-[100%]"
         style={{
           backgroundImage: `url(${rangeRoverSportImage})`,
           backgroundSize: 'cover',

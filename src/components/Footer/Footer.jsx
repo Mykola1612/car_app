@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './Footer.css';
+import sprite from '../../assets/sprite.svg';
 
 const Footer = () => {
   return (
@@ -38,7 +39,7 @@ const Footer = () => {
                     rel="noreferrer noopener nofollow"
                   >
                     <svg className="footer-icon">
-                      <use href="./images/icons.svg#icon-instagram"></use>
+                      <use href={`${sprite}#icon-instagram`}></use>
                     </svg>
                   </a>
                 </li>
@@ -49,7 +50,7 @@ const Footer = () => {
                     rel="noreferrer noopener nofollow"
                   >
                     <svg className="footer-icon">
-                      <use href="./images/icons.svg#icon-twitter"></use>
+                      <use href={`${sprite}#icon-twitter`}></use>
                     </svg>
                   </a>
                 </li>
