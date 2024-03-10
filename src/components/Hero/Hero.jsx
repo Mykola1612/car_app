@@ -12,11 +12,16 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       ></div>
-      <div>
-        <h1 className="text-[#fff]">
+      <div className="container max-w-[500px] h-[300px] bg-[rgb(0,0,0,0.4)] flex flex-col justify-center items-center ">
+        <h1 className="text-white text-[40px] text-center mb-[20px]">
           The best site for renting cars in Ukraine
         </h1>
-        <NavLink to="/catalog">Rent now</NavLink>
+        <NavLink
+          to="/catalog"
+          className="block w-[140px] mx-auto text-white text-[24px] text-center px-[10px] py-[4px] bg-black rounded-[12px] hover:text-black hover:bg-white  transition ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-[250ms]"
+        >
+          Rent now
+        </NavLink>
       </div>
     </section>
   );
