@@ -1,8 +1,13 @@
 import { NavLink } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 import './Footer.css';
 import sprite from '../../assets/sprite.svg';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <footer className="footer" id="footer">
       <section className="footer-main container">
@@ -62,17 +67,25 @@ const Footer = () => {
         <nav>
           <ul className="footer-nav-container">
             <li>
-              <NavLink className="link_header" to="/">
+              <NavLink className="link_header" to="/" onClick={scrollToTop}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className="link_header" to="/catalog">
+              <NavLink
+                className="link_header"
+                to="/catalog"
+                onClick={scrollToTop}
+              >
                 Catalog
               </NavLink>
             </li>
             <li>
-              <NavLink className="link_header" to="/favorites">
+              <NavLink
+                className="link_header"
+                to="/favorites"
+                onClick={scrollToTop}
+              >
                 Favorites
               </NavLink>
             </li>

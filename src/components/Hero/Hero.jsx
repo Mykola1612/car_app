@@ -1,11 +1,16 @@
 import { NavLink } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 import rangeRoverSportImage from '../../assets/land_rover_range_rover_sport.jpeg';
 
 const Hero = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <section id="home" className="h-[740px] flex justify-center items-center ">
       <div
-        className="absolute inset-0  h-[100%]"
+        className="absolute inset-0  h-[740px]"
         style={{
           backgroundImage: `url(${rangeRoverSportImage})`,
           backgroundSize: 'cover',
@@ -19,6 +24,7 @@ const Hero = () => {
         <NavLink
           to="/catalog"
           className="block w-[140px] mx-auto text-white text-[24px] text-center px-[10px] py-[4px] bg-[#1e1823] rounded-[12px] hover:text-[#1e1823] hover:bg-white  transition ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-[250ms]"
+          onClick={scrollToTop}
         >
           Rent now
         </NavLink>
