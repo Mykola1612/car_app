@@ -54,11 +54,11 @@ button {
 
 .link_header:hover,
 .link_header:focus {
-  color: #93c5fd;
+  color: #3470ff;
 }
 
 .link_header.active {
-  color: #93c5fd;
+  color: #3470ff;
 }
 
 /* Webkit Scroll */
