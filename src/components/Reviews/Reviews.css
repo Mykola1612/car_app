@@ -164,7 +164,7 @@
     padding-bottom: 100px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .reviews_box_list {
     width: 1136px;
   }

@@ -11,7 +11,8 @@ const Reviews = () => {
     <section id="choco_love" className="choco_loves pt-[60px]">
       <div className="container">
         <h2 className="reviews_title">
-          <span className="reviews_text_decoration">chocolate</span> is loved
+          <span className="reviews_text_decoration">Reviews</span> from our
+          clients
         </h2>
         <div className="reviews_section">
           <ul className="reviews_box_list">
