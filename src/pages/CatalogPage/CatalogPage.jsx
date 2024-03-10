@@ -48,7 +48,7 @@ const CatalogPage = () => {
   };
 
   return (
-    <main className="container pt-[60px]">
+    <main className="container pt-[140px]">
       <CatalogFilterForm filterFn={handelSubmitFilterBrand} />
       <CatalogCard
         handelOpen={(id) => {

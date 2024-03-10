@@ -1,10 +1,10 @@
-import { Container, Title } from './HomePage.styled';
+import Hero from '../../components/Hero/Hero';
 
 const HomePage = () => {
   return (
-    <Container>
-      <Title>Home Page</Title>
-    </Container>
+    <main>
+      <Hero />
+    </main>
   );
 };
 
