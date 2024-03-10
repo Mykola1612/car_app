@@ -22,7 +22,7 @@ const FavoritesPage = () => {
   }, [cars, carId]);
 
   return (
-    <main className="container pt-[140px] pb-[150px] ">
+    <main className="container pt-[140px] pb-[150px] main">
       <Favorites
         handelOpen={(id) => {
           setModalInfoIsOpen(true);

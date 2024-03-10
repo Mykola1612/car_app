@@ -5,14 +5,14 @@ const Hero = () => {
   return (
     <section id="home" className="h-[740px] flex justify-center items-center ">
       <div
-        className="absolute inset-0 z-[-1] h-[100%]"
+        className="absolute inset-0  h-[100%]"
         style={{
           backgroundImage: `url(${rangeRoverSportImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       ></div>
-      <div className="container max-w-[500px] h-[300px] bg-[rgb(0,0,0,0.4)] flex flex-col justify-center items-center ">
+      <div className="container max-w-[500px] h-[300px] bg-[rgb(0,0,0,0.4)] flex flex-col justify-center items-center relative z-[9] ">
         <h1 className="text-white text-[40px] text-center mb-[20px]">
           The best site for renting cars in Ukraine
         </h1>

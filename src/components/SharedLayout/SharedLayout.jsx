@@ -5,13 +5,13 @@ import Footer from '../Footer/Footer';
 
 const SharedLayout = () => {
   return (
-    <>
+    <div className="wrapper">
       <Header />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
       <Footer />
-    </>
+    </div>
   );
 };
 
