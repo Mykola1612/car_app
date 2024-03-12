@@ -1,108 +1,104 @@
-# React + Vite template
+# 🍸Car App
 
-Цей проєкт було створено за допомогою [Create Vite](https://vitejs.dev/). Для
-знайомства і налаштування додаткових можливостей
-[звернися до документації](https://vitejs.dev/guide/).
+ ### 👋 Welcome to the app!
+Our app more than just a collection of drinks -
+its a designed to be your own digital cocktail
+maker!
 
-## Створення репозиторію за шаблоном
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення
-репозиторію свого проєкту. Для цього натисни на кнопку `"Use this template"` і
-обери опцію `"Create a new repository"`, як показано на зображенні.
+## 📝Overview
 
-![Creating repo from a template step 1](./src/assets/template-step-1.png)
+This app will allow you to easily find and add your favorite cocktail recipes and create your own unique ones. 
+### 🔍Here's some functionality:
 
-На наступному кроці відкриється сторінка створення нового репозиторію. Заповни
-поле його імені, переконайся що репозиторій публічний, після чого натисни кнопку
-`"Create repository from template"`.
+📋 **Home Page** - home page with a general description of the services provided
+by the the company provides. Styling and design are at your discretion.
 
-![Creating repo from a template step 2](./src/assets/template-step-2.png)
+📋 **Catalog page** - a page containing a catalogue of cars of various
+configurations, which the user can filter by brand, price per hour of car
+rental, and the number of kilometres travelled by the car during its operation
+(mileage).
 
-Після того як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як показано
-на зображенні.
+📋 **Favorites page** - page with ads that have been added to the user's
+favourites The appearance of the application should consist of navigation
+(design at your discretion) and the at your discretion and the viewing area.
 
-![Settings GitHub Actions permissions step 1](./src/assets/gh-actions-perm-1.png)
+## 🎯Special features
 
-Проскроливши сторінку до самого кінця, у секції `"Workflow permissions"` вибери
-опцію `"Read and write permissions"` і постав галочку в чекбоксі. Це необхідно
-для автоматизації процесу деплою проєкту.
+📋 Create a routing using React Router. The application should have the
+following routes: "/" - the home page with a general description of the services
+provided by the company "/catalogue" - a page containing a catalogue of cars of
+different configurations "/favourites" - a page with ads that have been added to
+the user's favourites If a user goes to a route that does not exist, they should
+be redirect to the home page.
 
-![Settings GitHub Actions permissions step 2](./src/assets/gh-actions-perm-2.png)
+📋 To work with the list of ads, create your own personal backend for
+development using the UI service https://mockapi.io/. Create an adverts
+resource. Use the resource constructor and describe the advert object as
+described below.
 
-Тепер у тебе є особистий репозиторій проєкту, зі структурою файлів і папок
-репозиторія-шаблону. Далі працюй з ним як з будь-яким іншим особистим
-репозиторієм, клонуй його собі на комп'ютер, пиши код, роби комміти і відправляй
-їх на GitHub.
+### 🔍Advert:
 
-## Підготовка до роботи
+✔️ Create an advert in Mockapi with the following fields: id, year, make, model,
+type, img, description, fuelConsumption, engineSize, accessories,
+functionalities, rentalPrice, rentalCompany, address, rentalConditions, mileage
+(see screenshot below). Do not add new fields! To fill the collection, you can
+take adverts.json. If the data is missing or incomplete, please add it by
+yourself.
 
-1. Переконайся, що на комп'ютері встановлена LTS-версія Node.js.
-   [Скачай і встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встановіть базові залежності проекту командою `npm install`.
-3. Запустіть режим розробки, виконавши команду `npm run dev`.
-4. Перейди в браузері за адресою, що зазначено в терміналі.
+✔️ The database should contain at least 32 ads with different values (at your
+discretion). Implemented pagination, where one pagination page should contain 12
+ads.Pagination should be implemented on the Mockapi side.
 
-## Деплой
+### 🔍Add filtering:
 
-Продакшн версія проєкту буде автоматично збиратися і деплоїтися на GitHub Pages,
-у гілку `gh-pages`, щоразу, коли оновлюється гілка `main`. Наприклад, після
-прямого пушу або прийнятого пул-реквесту. Для цього необхідно у файлі
-`vite.config.js` відредагувати поле `base`, замінивши `react_vite` на свою назву
-репозиторію `"/your_repo_name"`, і відправити зміни на GitHub.
+✔️ Dropdown with car brands makes.json - show ads with cars of the corresponding
+brand
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) і
-виставити роздачу продакшн версії файлів із папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+### 🔍An additional task:
 
-![GitHub Pages settings](./src/assets/repo-settings.png)
+✔️ Dropdown with prices per hour of car rental ($10 increments) - show ads with
+cars whose rental price falls within the price range selected by the user.
 
-### Статус деплоя
+✔️ A group of inputs to determine the range of mileage within which the user
+will search for ads.
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+### 🔍Performance criteria:
 
-- **Жовтий колір** - виконується збірка і деплой проєкту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час збирання або деплою сталася помилка.
+✔️The layout is fixed in the rh, semantic and valid.
 
-Детальнішу інформацію про статус можна подивитися, клікнувши на іконку, і в
-випадаючому вікні перейти за посиланням `Details`.
+✔️Mandatory use of Redux.
 
-![Deployment status](./src/assets/deploy-status.png)
+✔️The Axios library is used for queries.
 
-### Жива сторінка
+✔️Pagination is implemented on the backend.
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною в налаштуваннях GitHub-репозиторію (`Settings` > `Pages`).
+✔️No errors in the browser console.
 
-![GitHub-pages URL](./src/assets/gh-pages-url.png)
+✔️Interactivity works in accordance with the terms of reference.
 
-Якщо відкривається порожня сторінка, переконайся що у вкладці `Console` немає
-помилок пов'язаних із неправильними шляхами до CSS і JS файлів проекту
-(**404**). Швидше за все найімовірніше, у тебе неправильне значення поля `base`
-у файлі `vite.config.js`.
+✔️The code is formatted and does not contain unused code.
 
-### Маршрутизація
+✔️The README.md must be described in the repository.
 
-Якщо додаток використовує бібліотеку `react-router-dom` для маршрутизації,
-необхідно додатково налаштувати компонент `<BrowserRouter>`, передавши в пропе
-`basename` точну назву твого репозиторію. Слеш на початку рядка обов'язковий.
+✔️The project is available on github pages or netlify.com.
 
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-### Додавання змінних в  .env
-Для зберігання конфігураційних даних, таких як API ключі, адреси серверів, порти та інші змінні використовуйте файл `.env`. Для цього необхідно з назви файлу `.env.template` видалити зайві ".template",після чого файл відповідатиме умовам файлу `.ignore` і буде зберігатися лише локально, не публікуючись на віддаленому репозиторії з метою безпеки. Задля використання змінних на GitHub-pages усі змінні, передбачені файлом .env, слід додати до файлу `.github/workflows/deploy.yml`, а також до налаштувань репозиторію. Для цього слід перейти (`Settings` > `Secrets and variables` > `Actions`)
+## 🔧Stack technology
+### **Frontend**:
+<p align="left"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Skills" width="40" height="40"/>  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Skills" width="40" height="40"/> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Skills" width="40" height="40"/>  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Skills" width="40" height="40"/>  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Skills" width="40" height="40"/>  
+<img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Skills" width="40" height="40"/> </p>
 
-![Add enviroments from .env](./src/assets/secrets.png)
 
-## Як це працює
+### **Backend**:
+**💬MockApi.io**
 
-1. Після кожного пушу в гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) з файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проєкт ініціалізується і
-   проходить збірку перед деплоєм. 3 Якщо всі кроки пройшли успішно, зібрана
-   продакшн-версія файлів проєкту відправляється в гілку `gh-pages`. В іншому
-   випадку, в логах виконання скрипта буде вказано в чому проблема.
+
+### **Utilits**:
+<p align="left" ><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma"  width="40" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Skills" align="left" width="40" height="40"/>  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Skills" align="left" width="40" height="40"/></p>
+
