@@ -62,7 +62,6 @@ const CatalogPage = () => {
         isOpen={modalInfoIsOpen}
         onClose={() => {
           setModalInfoIsOpen(false);
-          setCar([]);
           document.body.classList.remove('overflow-hidden');
         }}
       >
